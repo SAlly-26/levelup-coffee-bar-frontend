@@ -1,0 +1,224 @@
+/* =============================================
+   CARRITO (carrito.html) — Level Up Coffee Bar
+============================================= */
+
+/* === Fondo general === */
+body {
+    background-color: #151515;
+    color: #E0E0E0;
+}
+
+/* === Sección principal === */
+.seccion-carrito {
+    padding: 3rem 0;
+}
+
+.titulo-carrito {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+/* === Tarjeta de item en el carrito === */
+.card-item {
+    background-color: #24242B;
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: border-color 0.25s ease;
+    margin-bottom: 0.9rem;
+}
+
+.card-item:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+}
+
+.item-emoji {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.item-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-nombre {
+    font-weight: 700;
+    font-size: 0.98rem;
+    margin-bottom: 0.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-categoria {
+    font-size: 0.78rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.item-precio-unit {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.item-derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.item-subtotal {
+    color: #00E5FF;
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+/* === Botón eliminar === */
+.btn-eliminar {
+    background: transparent;
+    color: #FF007F;
+    border: 1px solid #FF007F;
+    border-radius: 8px;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-eliminar:hover {
+    background-color: #FF007F;
+    color: #fff;
+    box-shadow: 0 0 14px rgba(255, 0, 127, 0.35);
+}
+
+/* === Caja de resumen === */
+.card-resumen {
+    background-color: #24242B;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 12px;
+    padding: 1.6rem;
+    position: sticky;
+    top: 88px;
+}
+
+.resumen-titulo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.resumen-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.6rem;
+}
+
+.resumen-fila.total {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #E0E0E0;
+}
+
+.resumen-fila.total span:last-child {
+    color: #00E5FF;
+}
+
+.resumen-envio {
+    color: #00FF88;
+    font-weight: 600;
+}
+
+/* === Botón finalizar compra === */
+.btn-finalizar {
+    background-color: #00E5FF;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1.4rem;
+    cursor: pointer;
+    transition: box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.btn-finalizar:hover {
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+/* === Botón vaciar carrito === */
+.btn-vaciar {
+    background: transparent;
+    color: #FF007F;
+    border: 1.5px solid #FF007F;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-vaciar:hover {
+    background-color: #FF007F;
+    color: #fff;
+    box-shadow: 0 0 14px rgba(255, 0, 127, 0.35);
+}
+
+/* === Carrito vacío === */
+.carrito-vacio {
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.carrito-vacio-icon {
+    font-size: 5rem;
+    opacity: 0.35;
+    margin-bottom: 1rem;
+}
+
+.carrito-vacio h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.carrito-vacio p {
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.btn-ver-tienda {
+    background-color: #00E5FF;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 0.65rem 1.5rem;
+    text-decoration: none;
+    transition: box-shadow 0.25s ease;
+    display: inline-block;
+}
+
+.btn-ver-tienda:hover {
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
+    color: #000;
+}
