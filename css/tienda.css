@@ -1,14 +1,8 @@
-/* =============================================
-   TIENDA (index.html) — Level Up Coffee Bar
-============================================= */
-
-/* === Fondo general === */
 body {
     background-color: #151515;
     color: #E0E0E0;
 }
 
-/* === Sección principal === */
 .seccion-tienda {
     padding: 3rem 0;
 }
@@ -29,7 +23,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* === Tarjeta de producto === */
 .card-producto {
     background-color: #24242B;
     border: 1px solid rgba(0, 229, 255, 0.12);
@@ -45,7 +38,6 @@ body {
     box-shadow: 0 0 22px rgba(0, 229, 255, 0.2);
 }
 
-/* === Imagen / emoji del producto === */
 .producto-imagen {
     height: 160px;
     display: flex;
@@ -56,7 +48,6 @@ body {
     border-bottom: 1px solid rgba(0, 229, 255, 0.1);
 }
 
-/* === Badge de categoría === */
 .badge-categoria {
     font-size: 0.7rem;
     font-weight: 700;
@@ -71,7 +62,6 @@ body {
 .cat-rol        { background: rgba(180,0,255,0.15);  color: #C580FF; }
 .cat-cartas     { background: rgba(255,0,127,0.15);  color: #FF007F; }
 
-/* === Cuerpo de la tarjeta === */
 .producto-body {
     padding: 1.2rem;
     display: flex;
@@ -93,7 +83,6 @@ body {
     flex: 1;
 }
 
-/* === Precio === */
 .producto-precio {
     color: #00E5FF;
     font-weight: 900;
@@ -101,7 +90,6 @@ body {
     margin-top: 0.3rem;
 }
 
-/* === Control de cantidad === */
 .control-cantidad {
     display: flex;
     align-items: center;
@@ -134,7 +122,6 @@ body {
     color: #E0E0E0;
 }
 
-/* === Botón añadir al carrito === */
 .btn-agregar {
     background-color: #00E5FF;
     color: #000;
