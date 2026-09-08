@@ -21,7 +21,7 @@ const productos = [
         categoria: 'Rol',
         precio: 12990,
         imagen: 'img/dados.webp',
-        descripcion: 'Un conjunto de dados de poliédrico para juegos de rol, con un diseño de nebulosa en colores vibrantes. Incluye dados de 4, 6, 8, 10, 12 y 20 caras.',
+        descripcion: 'Un conjunto de dados poliédricos para juegos de rol, con un diseño de nebulosa en colores vibrantes. Incluye dados de 4, 6, 8, 10, 12 y 20 caras.',
     },
     {
         id: 4,
@@ -36,16 +36,16 @@ const productos = [
 function mostrarProductos() {
     const contenedor = document.getElementById('contenedor-productos');
 
-    contenedor.innerHTMML = productos.map(producto => `
+    contenedor.innerHTML = productos.map(producto => `
         <div class="col-sm-6 col-lg-3">
             <div class="card-producto">
 
                 <div class="producto-imagen">
-                    <img src="${producto.imagen}" alt="${prodcuto.nombre}">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
                 </div>
 
                 <div class="producto-body">
-                    <span class="producto-bodycat-${producto.categoria.toLowerCase()}">
+                    <span class="badge-categoria cat-${producto.categoria.toLowerCase()}">
                         ${producto.categoria}
                     </span>
                     <p class="producto-nombre">${producto.nombre}</p>
@@ -54,7 +54,7 @@ function mostrarProductos() {
 
                     <div class="d-flex align-items-center gap-2 mt-2">
                         <div class="control-cantidad">
-                            <button class="btn-cantidad" onclick="cambiarCantidad(${producto.id}, -1)">-</button>
+                            <button class="btn-cantidad" onclick="cambiarCantidad(${producto.id}, -1)">−</button>
                             <span class="numero-cantidad" id="cantidad-${producto.id}">1</span>
                             <button class="btn-cantidad" onclick="cambiarCantidad(${producto.id}, 1)">+</button>
                         </div>
@@ -63,7 +63,56 @@ function mostrarProductos() {
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
     `).join('');
 }
+
+function cambiarCantidad(id, cambio) {
+    const span = document.getElementById(`cantidad-${id}`);
+    let cantidad = parseInt(span.textContent);
+
+    cantidad += cambio;
+
+    if (cantidad < 1) cantidad = 1;
+
+    span.textContent = cantidad;
+}
+
+function agregarAlCarrito(id) {
+    const producto = productos.find(p => p.id === id);
+    const cantidad = parseInt(document.getElementById(`cantidad-${id}`).textContent);
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    const yaExiste = carrito.find(item => item.id === id);
+
+    if (yaExiste) {
+        yaExiste.cantidad += cantidad;
+    } else {
+        carrito.push({
+            id:        producto.id,
+            nombre:    producto.nombre,
+            categoria: producto.categoria,
+            precio:    producto.precio,
+            imagen:    producto.imagen,
+            cantidad:  cantidad
+        });
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarBadge(carrito);
+    alert(`Se han añadido ${cantidad} unidad(es) de "${producto.nombre}" al carrito.`);
+}
+
+function actualizarBadge(carrito) {
+    const totalItems = carrito.reduce((suma, item) => suma + item.cantidad, 0);
+    const badge = document.getElementById('cart-badge');
+    if (badge) badge.textContent = totalItems;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    mostrarProductos();
+    const carritoGuardado = JSON.parse(localStorage.getItem('carrito')) || [];
+    actualizarBadge(carritoGuardado);
+});

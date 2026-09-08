@@ -43,7 +43,8 @@ function mostrarCarrito() {
 
     lista.innerHTML = carrito.map(item => `
         <div class="card-item">
-            <span class="item-emoji">${item.emoji}</span>
+            <img src="${item.imagen}" alt="${item.nombre}"
+                 style="width:75px; height:75px; object-fit:cover; border-radius:8px; flex-shrink:0;">
             <div class="item-info">
                 <p class="item-nombre">${item.nombre}</p>
                 <p class="item-categoria">${item.categoria}</p>
