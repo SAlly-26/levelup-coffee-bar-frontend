@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark border-bottom border-secondary">
+        <div class="containter-fluid px-4">
+            <a class="navbar-brand fw-bold" href="index.html">Level Up Coffee Bar</a>
+            <span class="badge bg-danger">Panel Admin</span>
+        </div>
+    </nav>
+
+    <div class="admin-layout">
+        
+        <aside class="admin-sidebar">
+            <p class="admin-sidebar-title">Menú</p>
+            <button class="admin-nav-btn active" onclick="mostrarPanel('inventario')">Inventario</button>
+            <button class="admin-nav-btn" onclic="mostrarPanel('usuarios')">Usuarios</button>
+        </aside>
+
+        <main class="admin-main">
+
+            <div id="panel-inventario" class="admin-panel active">
+                <h4 class="admin-panel-titulo">Inventario</h4>
+                <div class="row g-3" id="admin-lista-productos">
+
+                </div>
+            </div>
+
+            <div id="panel-agregar" class="admin-panel">
+                <h4 class="admin-panel-titulo">Agregar Producto</h4>
+                
+                <div class="admin-form">
+                    <div class="row g-3">
+
+                        <div class="col-12">
+                            <label class="admin-label">Nombre del juego <span>*
+                            </span></label>
+                            <input type="text" id="admin-nombre" class="admin-input"
+                                    placeholder="Ej: Ticket to Ride">
+                            <p class="admin-error" id="err-nombre"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="admin-label">Categoria<span>*</span></label>
+                            <select id="admin-categoria" class="admin-input">
+                                <option value="">Selecciona...</option>
+                                <option value="Estrategia">Estrategia</option>
+                                <option value="TCG">TCG</option>
+                                <option value="Rol">Rol</option>
+                                <option value="Cartas">Cartas</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                            <p class="admin-error" id="err-categoria"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="admin-label">Precio (CLP) <span>*</span></label>
+                            <input type="number" id="admin-precio" class="admin-input"
+                                    placeholder="Ej: 29990" min="0">
+                            <p class="admin-error" id="err-precio"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="admin-label">Stock <span>*</span></label>
+                            <input type="number" id="admin-stock" class="admin-input"
+                                    placeholder="Ej: 10" min="0" step="1">
+                            <p class="admin-error" id="err-stock"></p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="admin-label">Imagen <span>*</span></label>
+                            <input type="text" id="admin-imagen" class="admin-input"
+                                    placeholder="Ej: img/imagen.png o img/juego.webp">
+                        </div>
+
+                        <div class="col-12">
+                            <label class="admin-label">Descripción <span>*</span></label>
+                            <textarea id="admin-descripcion" class="admin-input" rows="3"
+                                      placeholder="Describe el juego..."></textarea>
+                            <p class="admin-error" id="err-descripcion"></p>
+                        </div>
+                        <div class="col-12">
+                            <button class="admin-btn-agregar" onclick="agregarProducto()">
+                                ➕ Agregar al catálogo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PANEL: Usuarios -->
+            <div id="panel-usuarios" class="admin-panel">
+                <h4 class="admin-panel-titulo">👥 Usuarios</h4>
+                <div class="table-responsive">
+                    <table class="admin-tabla">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>RUN</th>
+                                <th>Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-lista-usuarios">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin.js"></script>
+                    </div>
+                </div>
+            </div>
+        </main>"
+    </div>
+    
+</body>
+</html>
