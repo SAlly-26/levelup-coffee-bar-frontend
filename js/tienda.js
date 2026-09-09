@@ -28,7 +28,7 @@ const productos = [
         nombre: 'Exploding Kittens',
         categoria: 'Cartas',
         precio: 19990,
-        imagen: 'img/kittens.webp',
+        imagen: 'img/exkittens.webp',
         descripcion: 'Un juego de cartas donde los gatos explotan. Los jugadores deben evitar los gatos explosivos mientras intentan sobrevivir.',
     }
 ];
