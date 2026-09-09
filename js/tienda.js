@@ -4,7 +4,7 @@ const productos = [
         nombre: 'Catan (Juego Base)',
         categoria: 'Estrategia',
         precio: 39990,
-        imagen: 'img/catan.webp',
+        imagen: 'img/catan.png',
         descripcion: 'El clásico juego de mesa de comercio y construcción. Construye carreteras, pueblos y ciudades mientras negocias con otros jugadores para obtener recursos.',
     },
     {
@@ -12,7 +12,7 @@ const productos = [
         nombre: 'Booster Pack Pokemon TCG',
         categoria: 'TCG',
         precio: 4990,
-        imagen: 'img/pokemon.webp',
+        imagen: 'img/cartaspokemon.png',
         descripcion: 'Un paquete de refuerzo del juego de cartas coleccionables Pokémon. Contiene cartas aleatorias que pueden incluir Pokémon, entrenadores y energías.',
     },
     {
@@ -20,7 +20,7 @@ const productos = [
         nombre: 'Set de Dados D&D "Nebulosa"',
         categoria: 'Rol',
         precio: 12990,
-        imagen: 'img/dados.webp',
+        imagen: 'img/dados.png',
         descripcion: 'Un conjunto de dados poliédricos para juegos de rol, con un diseño de nebulosa en colores vibrantes. Incluye dados de 4, 6, 8, 10, 12 y 20 caras.',
     },
     {
@@ -28,7 +28,7 @@ const productos = [
         nombre: 'Exploding Kittens',
         categoria: 'Cartas',
         precio: 19990,
-        imagen: 'img/exkittens.webp',
+        imagen: 'img/kittens.png',
         descripcion: 'Un juego de cartas donde los gatos explotan. Los jugadores deben evitar los gatos explosivos mientras intentan sobrevivir.',
     }
 ];
