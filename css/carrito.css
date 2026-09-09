@@ -1,14 +1,8 @@
-/* =============================================
-   CARRITO (carrito.html) — Level Up Coffee Bar
-============================================= */
-
-/* === Fondo general === */
 body {
     background-color: #151515;
     color: #E0E0E0;
 }
 
-/* === Sección principal === */
 .seccion-carrito {
     padding: 3rem 0;
 }
@@ -19,7 +13,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* === Tarjeta de item en el carrito === */
 .card-item {
     background-color: #24242B;
     border: 1px solid rgba(0, 229, 255, 0.1);
@@ -80,7 +73,6 @@ body {
     font-size: 1.05rem;
 }
 
-/* === Botón eliminar === */
 .btn-eliminar {
     background: transparent;
     color: #FF007F;
@@ -99,7 +91,6 @@ body {
     box-shadow: 0 0 14px rgba(255, 0, 127, 0.35);
 }
 
-/* === Caja de resumen === */
 .card-resumen {
     background-color: #24242B;
     border: 1px solid rgba(0, 229, 255, 0.2);
@@ -144,7 +135,6 @@ body {
     font-weight: 600;
 }
 
-/* === Botón finalizar compra === */
 .btn-finalizar {
     background-color: #00E5FF;
     color: #000;
@@ -163,7 +153,6 @@ body {
     filter: brightness(1.1);
 }
 
-/* === Botón vaciar carrito === */
 .btn-vaciar {
     background: transparent;
     color: #FF007F;
@@ -183,7 +172,6 @@ body {
     box-shadow: 0 0 14px rgba(255, 0, 127, 0.35);
 }
 
-/* === Carrito vacío === */
 .carrito-vacio {
     text-align: center;
     padding: 5rem 2rem;
