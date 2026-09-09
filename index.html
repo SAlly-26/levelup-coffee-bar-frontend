@@ -11,96 +11,78 @@
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">☕ Level Up Coffee Bar</a>
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menuNav"
-                    aria-controls="menuNav"
-                    aria-expanded="false"
-                    aria-label="Abrir navegación">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuNav">
-                <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="menucafe.html">Menú Café</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-info btn-sm px-3" href="carrito.html">
-                            🛒 Carrito
-                            <span id="cart-badge" class="badge bg-info text-dark ms-1">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html">☕ Level Up Coffee Bar</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Abrir navegación"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menuNav"><ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+<li class="nav-item"><a class="nav-link active" href="index.html">Tienda</a></li>
+<li class="nav-item"><a class="nav-link" href="menucafe.html">Menú Café</a></li>
+<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
+<li class="nav-item"><a class="nav-link btn btn-outline-info btn-sm px-3" href="carrito.html">🛒 Carrito <span id="cart-badge" class="badge bg-info text-dark ms-1">0</span></a></li>
+</ul></div></div></nav>
 
-    <!-- CAROUSEL -->
+    <!-- TIENDA -->
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner">
+  <div class="carousel-inner">
 
-            <div class="carousel-item active">
-                <img src="img/bienvenida.png" class="d-block w-100" alt="Bienvenida">
-                <div class="carousel-caption d-none d-md-block">
-                    <p class="text-uppercase fw-bold text-info">Bienvenido</p>
-                    <h5>Todo gran juego comienza con el botón de Start.</h5>
-                    <p>Juegos de mesa, cartas y accesorios para tu próxima partida.</p>
-                </div>
-            </div>
+    <!-- Slide 1: Bienvenida -->
+    <div class="carousel-item active">
+    <img src="img/bienvenida.png" class="d-block w-100" alt="Bienvenida">
+     <div class="carousel-caption d-none d-md-block"> 
+        <p class="text-uppercase fw-bold text-info">Bienvenido</p>
+        <h5>Todo gran juego comienza con el botón de Start.</h5>
+        <p>Juegos de mesa, cartas y accesorios para tu próxima partida.</p>
+   </div>
+</div>
 
-            <div class="carousel-item">
-                <img src="img/promociones.png" class="d-block w-100" alt="Promociones">
-                <div class="carousel-caption d-none d-md-block">
-                    <p class="text-uppercase fw-bold text-warning">Promociones Gamer</p>
-                    <h5>Combos especiales para jugar en equipo.</h5>
-                    <p>Descuentos en horas de mesa acompañados de tu combo cafetero favorito.</p>
-                </div>
-            </div>
+<!-- Slide 2: Promociones (Sin 'active') -->
+    <div class="carousel-item">
+    <img src="img/promociones.png" class="d-block w-100" alt="Promociones">
+    <div class="carousel-caption d-none d-md-block"> 
+        <p class="text-uppercase fw-bold text-warning">Promociones Gamer</p>
+        <h5>Combos especiales para jugar en equipo.</h5>
+     <p>Descuentos en horas de mesa acompañados de tu combo cafetero favorito.</p>
+  </div>
+</div>
 
-            <div class="carousel-item">
-                <img src="img/bebidas.png" class="d-block w-100" alt="Bebidas">
-                <div class="carousel-caption d-none d-md-block">
-                    <p class="text-uppercase fw-bold text-info">Barra de Pociones</p>
-                    <h5>Recarga tu barra de Mana y Stamina.</h5>
-                    <p>Cafés de especialidad, frappés y bebidas frías inspiradas en tus juegos favoritos.</p>
-                </div>
-            </div>
+<!-- Slide 3: Bebidas -->
+    <div class="carousel-item">
+    <img src="img/bebidas.png" class="d-block w-100" alt="Bebidas">
+    <div class="carousel-caption d-none d-md-block"> 
+        <p class="text-uppercase fw-bold text-info">Barra de Pociones</p>
+        <h5>Recarga tu barra de Mana y Stamina.</h5>
+        <p>Cafés de especialidad, frappés y bebidas frías inspiradas en tus juegos favoritos.</p>
+    </div>
+</div>
 
-            <div class="carousel-item">
-                <img src="img/snacks.png" class="d-block w-100" alt="Snacks">
-                <div class="carousel-caption d-none d-md-block">
-                    <p class="text-uppercase fw-bold text-info">Power-Ups Gastronómicos</p>
-                    <h5>Loot delicioso listo para compartir en la mesa.</h5>
-                    <p>Sandwiches, waffles y snacks diseñados para comer cómodo sin ensuciar tus cartas.</p>
-                </div>
-            </div>
+<!-- Slide 4: Snacks -->
+    <div class="carousel-item">
+    <img src="img/snacks.png" class="d-block w-100" alt="Snacks">
+    <div class="carousel-caption d-none d-md-block"> 
+        <p class="text-uppercase fw-bold text-info">Power-Ups Gastronómicos</p>
+        <h5>Loot delicioso listo para compartir en la mesa.</h5>
+        <p>Sandwiches, waffles y snacks diseñados para comer cómodo sin ensuciar tus cartas.</p>
+    </div>
+  </div>
+</div>
 
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    
+<!-- Los productos los genera tienda.js aquí -->
+ <div class="row g-4" id="contenedor-productos">
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
-    <!-- PRODUCTOS -->
-    <div class="container seccion-tienda">
-        <h2 class="titulo-tienda">Nuestra <span>Tienda</span></h2>
-        <p class="subtitulo-tienda">Juegos de mesa, cartas y accesorios para tu próxima partida</p>
-        <div class="row g-4" id="contenedor-productos"></div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <div class="container">© 2024 Level Up Coffee Bar. Todos los derechos reservados.</div>
-    </footer>
+    <footer class="site-footer"><div class="container">© 2024 Level Up Coffee Bar. Todos los derechos reservados.</div></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/tienda.js"></script>
