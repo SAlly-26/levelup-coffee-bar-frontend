@@ -1,0 +1,171 @@
+/* Estilos del Inicio*/
+/* =============================================
+   TIENDA (index.html) — Level Up Coffee Bar
+============================================= */
+
+/* === Fondo general === */
+body {
+    background-color: #151515;
+    color: #E0E0E0;
+}
+
+/* === Sección principal === */
+.seccion-tienda {
+    padding: 3rem 0;
+}
+
+.titulo-tienda {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.titulo-tienda span {
+    color: #00E5FF;
+}
+
+.subtitulo-tienda {
+    color: #888;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+}
+
+/* === Tarjeta de producto === */
+.card-producto {
+    background-color: #24242B;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-producto:hover {
+    transform: translateY(-6px);
+    border-color: #00E5FF;
+    box-shadow: 0 0 22px rgba(0, 229, 255, 0.2);
+}
+
+/* === Imagen del producto === */
+.producto-imagen {
+    height: 200px;
+    overflow: hidden;
+    background-color: #1a1a22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-producto:hover .producto-imagen img {
+    transform: scale(1.05);
+}
+
+/* === Badge de categoría === */
+.badge-categoria {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.cat-estrategia { background: rgba(0, 229, 255, 0.15); color: #00E5FF; }
+.cat-tcg        { background: rgba(255, 200, 0, 0.15);  color: #FFC800; }
+.cat-rol        { background: rgba(180, 0, 255, 0.15);  color: #C580FF; }
+.cat-cartas     { background: rgba(255, 0, 127, 0.15);  color: #FF007F; }
+
+/* === Cuerpo de la tarjeta === */
+.producto-body {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.producto-nombre {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.producto-descripcion {
+    font-size: 0.83rem;
+    color: #888;
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+}
+
+/* === Precio === */
+.producto-precio {
+    color: #00E5FF;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 0.3rem 0 0;
+}
+
+/* === Control de cantidad === */
+.control-cantidad {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.btn-cantidad {
+    background: none;
+    border: none;
+    color: #00E5FF;
+    width: 32px;
+    height: 34px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cantidad:hover {
+    background: rgba(0, 229, 255, 0.12);
+}
+
+.numero-cantidad {
+    min-width: 32px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #E0E0E0;
+}
+
+/* === Botón añadir al carrito === */
+.btn-agregar {
+    background-color: #00E5FF;
+    color: #000;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem 1rem;
+    flex: 1;
+    transition: box-shadow 0.25s ease, filter 0.25s ease;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.btn-agregar:hover {
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
+    filter: brightness(1.1);
+}
