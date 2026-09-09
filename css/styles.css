@@ -169,3 +169,36 @@ body {
     box-shadow: 0 0 18px rgba(0, 229, 255, 0.4);
     filter: brightness(1.1);
 }
+
+
+/* ===== ESTILOS COMPARTIDOS POR TODAS LAS PÁGINAS ===== */
+:root{--bg:#151515;--surface:#24242b;--cyan:#00e5ff;--pink:#ff007f;--muted:#888;--border:rgba(0,229,255,.14)}
+html{scroll-behavior:smooth}
+body{background-color:var(--bg);color:#e0e0e0;min-height:100vh}
+.navbar{min-height:70px}
+.navbar .nav-link{border-radius:8px;transition:.2s}
+.navbar .nav-link:hover{background:rgba(0,229,255,.08);color:var(--cyan)!important}
+.navbar .nav-link.active{color:var(--cyan)!important}
+.page-section,.historia,.contacto{padding:4rem 0}
+.page-header{margin-bottom:2.5rem}
+.page-header h1,.page-header h2,.menu-hero h1,.menu-section h2,.historia-block h1,.historia-block h2,.contacto h1,.contacto h2{font-weight:800}
+.page-header p,.menu-hero p,.menu-section> .container>p,.historia-block p,.contacto p,.sucursal p{color:var(--muted);line-height:1.75}
+.content-card,.historia-block,.sucursal,.formulario-contacto,.menu-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.content-image{width:100%;max-height:380px;object-fit:cover;border-radius:12px}
+.menu-hero{text-align:center;padding:4rem 0 2rem}
+.menu-hero p{max-width:750px;margin:auto}
+.menu-hero strong,.menu-section h2 strong{color:var(--cyan)}
+.menu-section{padding:2rem 0}
+.menu-item{height:100%;transition:.2s}
+.menu-item:hover{transform:translateY(-3px);border-color:rgba(0,229,255,.4)}
+.menu-item h3{font-size:1.15rem;font-weight:800}
+.menu-price{color:var(--cyan)!important;font-weight:800}
+.price-old{color:var(--muted)}
+.sucursal{height:100%}
+.sucursal h3{font-weight:800}
+.sucursal img{width:100%;max-height:260px;object-fit:cover;border-radius:10px;margin:.75rem 0}
+.sucursal a{color:var(--cyan);text-decoration:none}
+.formulario-contacto .form-control{background:#1b1b20;border-color:rgba(255,255,255,.12);color:#e0e0e0}
+.formulario-contacto .form-control:focus{border-color:var(--cyan);box-shadow:0 0 0 .2rem rgba(0,229,255,.1)}
+.site-footer{border-top:1px solid rgba(255,255,255,.08);color:#777;padding:1.5rem 0;margin-top:2rem;text-align:center;font-size:.85rem}
+@media(max-width:768px){.card-item{align-items:flex-start}.item-derecha{align-items:flex-start}.card-resumen{position:static}}

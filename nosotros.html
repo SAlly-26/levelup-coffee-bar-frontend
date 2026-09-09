@@ -1,37 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html 
+lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Nosotros — Level Up Coffee Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div>
-        <ul class="navbar-nav flex-row ms-auto gap-2">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Tienda</a></li>
-            <li class="nav-item"><a class="nav-link" href="menucafe.html">Menú Café</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
-            <li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>       
-        </ul>
-    </div>
-<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">☕ Level Up Coffee Bar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Abrir navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Tienda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menucafe.html">Menú Café</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contactanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Registrarse</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-info btn-sm px-3" href="carrito.html">🛒 Carrito <span id="cart-badge" class="badge bg-info text-dark ms-1">0</span></a></li>
+                </ul>
+            </div>
+        </div>
+</nav>
+<main class="historia">
+    <div class="container">
+    <div class="page-header">
     <h1>Nuestra historia</h1>
-    <p>Creamos este espacio porque sabemos que los videojuegos se 
-        disfrutan más en cooperativo local, rodeado de amigos, buena comida y los mejores tragos. Si tienes dudas sobre 
-        nuestras consolas, quieres reservar una mesa para tu clan o estás planeando un evento especial, mándanos un mensaje. 
-        ¡Estamos listos para el juego!
-    </p>
-    <img src="https://tse1.mm.bing.net/th/id/OIP.N2MF0_-M2c9rE8OITFUebQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" width="300">
-    <h2>Todo gran juego comienza con el botón de Start.</h2> 
-    <p> Este espacio porque sabemos que 
-        los videojuegos se disfrutan más en cooperativo local, rodeado de amigos, buena comida y los mejores tragos. 
-        Si tienes dudas sobre nuestras consolas, quieres reservar una mesa para tu clan o estás planeando un evento especial,
-         mándanos un mensaje. ¡Estamos listos para el juego!</p>
-    <img src="https://tse2.mm.bing.net/th/id/OIP.wg0qutZMN-gQ9Ij6k8YOyAHaD-?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" width="300">
+    <p>Creamos este espacio porque sabemos que los videojuegos se disfrutan más en cooperativo local, rodeado de amigos, buena comida y los mejores tragos.</p>
 </div>
-<footer>
-    <p>© 2024 GameHub. Todos los derechos reservados.</p>
+    <div class="row g-4">
+    <div class="col-lg-6"><article class="historia-block h-100">
+        <h2>Todo gran juego comienza con el botón de Start.</h2>
+        <p>Este espacio nace para reunir a quienes disfrutan de los videojuegos, la buena comida y las partidas con amigos. Si quieres reservar una mesa para tu clan o estás planeando un evento especial, mándanos un mensaje. ¡Estamos listos para el juego!</p><img class="content-image" src="https://tse1.mm.bing.net/th/id/OIP.N2MF0_-M2c9rE8OITFUebQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Espacio de referencia"></article></div>
+    <div class="col-lg-6"><article class="historia-block h-100">
+        <h2>Un lugar para jugar juntos</h2>
+        <p>Queremos que cada visita se sienta como una nueva partida: cómoda, entretenida y lista para compartir. Ven con tu grupo y disfruta Level Up Coffee Bar.</p>
+        <img class="content-image" src="https://tse2.mm.bing.net/th/id/OIP.wg0qutZMN-gQ9Ij6k8YOyAHaD-?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ambiente gamer de referencia">
+    </article></div>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+    <div class="container">
+        © 2024 Level Up Coffee Bar. Todos los derechos reservados.
+    </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
