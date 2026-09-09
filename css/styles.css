@@ -478,3 +478,56 @@ body{background-color:var(--bg);color:#e0e0e0;min-height:100vh}
         display: none;
     }
 }
+/* Ajustes exclusivos de la página del menú */
+
+/* Las dos tarjetas superiores tendrán la misma altura */
+.pagina-menu .content-card {
+  height: 100%;
+}
+
+/* Fotografías horizontales, sin deformarlas */
+.pagina-menu .content-image,
+.pagina-menu .menu-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+/* Orden vertical dentro de cada producto */
+.pagina-menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Títulos de las tarjetas superiores */
+.pagina-menu .content-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* Títulos de los productos */
+.pagina-menu .menu-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Texto más cómodo de leer */
+.pagina-menu .content-card p,
+.pagina-menu .menu-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Precios alineados abajo en cada fila */
+.pagina-menu .menu-item > p:last-child {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 1rem;
+}
