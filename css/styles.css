@@ -65,6 +65,17 @@ body {
 .carousel-caption h5 {
     font-size: 38px;
 }
+/* Animacion Scroll*/
+.reveal {
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* === Tarjeta de producto === */
 .card-producto {
     background-color: #24242B;
@@ -219,6 +230,29 @@ body{background-color:var(--bg);color:#e0e0e0;min-height:100vh}
 .page-header h1,.page-header h2,.menu-hero h1,.menu-section h2,.historia-block h1,.historia-block h2,.contacto h1,.contacto h2{font-weight:800}
 .page-header p,.menu-hero p,.menu-section> .container>p,.historia-block p,.contacto p,.sucursal p{color:var(--muted);line-height:1.75}
 .content-card,.historia-block,.sucursal,.formulario-contacto,.menu-item{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+/* Ajustes exclusivos de Historia */
+
+.historia {
+    background-color: var(--surface);
+}
+
+.historia .page-header {
+    margin-bottom: 1.5rem;
+}
+
+.historia .page-header h1 {
+    color: #E0E0E0;
+}
+
+.historia .page-header p {
+    color: var(--muted);
+}
+
+.historia .historia-block {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
 .content-image{width:100%;max-height:380px;object-fit:cover;border-radius:12px}
 .menu-hero{text-align:center;padding:4rem 0 2rem}
 .menu-hero p{max-width:750px;margin:auto}
