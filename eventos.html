@@ -22,127 +22,219 @@
 <li class="nav-item"><a class="nav-link btn btn-outline-info btn-sm px-3" href="carrito.html">🛒 Carrito <span id="cart-badge" class="badge bg-info text-dark ms-1">0</span></a></li>
 </ul></div></div></nav>
 
-<div class="row g-4">
+    <!-- CONTENIDO PRINCIPAL DE EVENTOS -->
+    <main class="eventos py-5">
+        <div class="container">
+            <div class="mb-4">
+                <h1 class="fw-bold">Próximos Eventos</h1>
+                <p class="text-secondary">Torneos, noches temáticas y mucho más.</p>
+            </div>
 
-  <!-- 4 tarjetas de eventos -->
+            <div class="row g-4">
+                <!-- Evento 1 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card event-card h-100 bg-dark text-light border-secondary">
+                        <img src="img/valorant.png" class="card-img-top" alt="Torneo de Valorant" />
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-info small mb-2">12 SEP · 16:00</p>
+                            <h3 class="card-title h5">Torneo Valorant 5v5</h3>
+                            <p class="card-text text-secondary">
+                                Reúne a tu equipo y compite por el primer lugar.
+                            </p>
+                            <button type="button" class="btn btn-outline-light mt-auto" data-bs-toggle="modal" data-bs-target="#modalValorant">
+                                Más info →
+                            </button>
+                        </div>
+                    </article>
+                </div>
 
-<section class="eventos py-5">
-  <div class="container">
-    <div class="mb-4">
-      <h1>Próximos Eventos</h1>
-      <p>Torneos, noches temáticas y mucho más.</p>
-    </div>
+                <!-- Evento 2 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card event-card h-100 bg-dark text-light border-secondary">
+                        <img src="img/mariokart.png" class="card-img-top" alt="Noche de Mario Kart" />
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-info small mb-2">18 SEP · 19:00</p>
+                            <h3 class="card-title h5">Noche de Mario Kart</h3>
+                            <p class="card-text text-secondary">
+                                Carreras, risas y premios para los mejores pilotos.
+                            </p>
+                            <button type="button" class="btn btn-outline-light mt-auto" data-bs-toggle="modal" data-bs-target="#modalMarioKart">
+                                Más info →
+                            </button>
+                        </div>
+                    </article>
+                </div>
 
-    <div class="row g-4">
-      <!-- Evento 1 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <article class="card event-card h-100 bg-dark text-light border-secondary">
-          <img src="img/valorant.png" class="card-img-top"alt="Torneo de Valorant"/>
-          <div class="card-body d-flex flex-column">
-            <p class="text-info small mb-2">12 SEP · 16:00</p>
-            <h3 class="card-title h5">Torneo Valorant 5v5</h3>
-            <p class="card-text text-secondary">
-              Reúne a tu equipo y compite por el primer lugar.
-            </p>
-            <a href="#" class="btn btn-outline-light mt-auto">
-              Más info →
-            </a>
-          </div>
-        </article>
-      </div>
+                <!-- Evento 3 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card event-card h-100 bg-dark text-light border-secondary">
+                        <img src="img/overcooked.png" class="card-img-top" alt="Torneo de Overcooked" />
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-info small mb-2">26 SEP · 17:00</p>
+                            <h3 class="card-title h5">Torneo de Overcooked</h3>
+                            <p class="card-text text-secondary">
+                                Trae a tus ayudantes de cocina, demuestren sus habilidades y gana premios.
+                            </p>
+                            <button type="button" class="btn btn-outline-light mt-auto" data-bs-toggle="modal" data-bs-target="#modalOvercooked">
+                                Más info →
+                            </button>
+                        </div>
+                    </article>
+                </div>
 
-      <!-- Evento 2 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <article class="card event-card h-100 bg-dark text-light border-secondary">
-          <img src="img/mariokart.png" class="card-img-top" alt="Noche de Mario Kart" />
-          <div class="card-body d-flex flex-column">
-            <p class="text-info small mb-2">18 SEP · 19:00</p>
-            <h3 class="card-title h5">Noche de Mario Kart</h3>
-            <p class="card-text text-secondary">
-              Carreras, risas y premios para los mejores pilotos.
-            </p>
-            <a href="#" class="btn btn-outline-light mt-auto">
-              Más info →
-            </a>
-          </div>
-        </article>
-      </div>
+                <!-- Evento 4 -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <article class="card event-card h-100 bg-dark text-light border-secondary">
+                        <img src="img/juegosdemesa.png" class="card-img-top" alt="Club de Juegos de Mesa" />
+                        <div class="card-body d-flex flex-column">
+                            <p class="text-info small mb-2">3 OCT · 15:00</p>
+                            <h3 class="card-title h5">Club de Juegos de Mesa</h3>
+                            <p class="card-text text-secondary">
+                                Una tarde para descubrir y jugar nuevos juegos con amigos.
+                            </p>
+                            <button type="button" class="btn btn-outline-light mt-auto" data-bs-toggle="modal" data-bs-target="#modalJuegosDeMesa">
+                                Más info →
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
 
-      <!-- Evento 3 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <article class="card event-card h-100 bg-dark text-light border-secondary">
-          <img src="img/overcooked.png" class="card-img-top" alt="Torneo de Overcooked"/>
-          <div class="card-body d-flex flex-column">
-            <p class="text-info small mb-2">26 SEP · 17:00</p>
-            <h3 class="card-title h5">Torneo de Overcooked</h3>
-            <p class="card-text text-secondary">
-              Trae a tus ayudantes de cocina, demuestren sus habilidades y gana premios.
-            </p>
-            <a href="#" class="btn btn-outline-light mt-auto">
-              Más info →
-            </a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Evento 4 -->
-      <div class="col-12 col-sm-6 col-lg-3">
-        <article class="card event-card h-100 bg-dark text-light border-secondary">
-          <img
-            src="img/juegosdemesa.png"
-            class="card-img-top"
-            alt="Club de Juegos de Mesa"
-          />
-
-          <div class="card-body d-flex flex-column">
-            <p class="text-info small mb-2">3 OCT · 15:00</p>
-            <h3 class="card-title h5">Club de Juegos de Mesa</h3>
-            <p class="card-text text-secondary">
-              Una tarde para descubrir y jugar nuevos juegos con amigos.
-            </p>
-            <a href="#" class="btn btn-outline-light mt-auto">
-              Más info →
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div>
-
-<!-- Cuadro de reserva -->
-<div class="row mt-5">
-  <div class="col-12">
-    <section class="card bg-dark text-light border-secondary p-4">
-      <div
-        class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3"
-      >
-        <div class="d-flex align-items-center gap-3">
-          <div class="fs-1 text-info">📅</div>
-
-          <div>
-            <h2 class="h5 mb-1">
-              ¿Quieres reservar para un evento privado?
-            </h2>
-
-            <p class="mb-0 text-secondary">
-              Escríbenos y organizamos algo especial para ti y tu grupo.
-            </p>
-          </div>
+            <!-- Cuadro de reserva -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <section class="card bg-dark text-light border-secondary p-4">
+                        <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-1 text-info">📅</div>
+                                <div>
+                                    <h2 class="h5 mb-1">¿Quieres reservar para un evento privado?</h2>
+                                    <p class="mb-0 text-secondary">Escríbenos y organizamos algo especial para ti y tu grupo.</p>
+                                </div>
+                            </div>
+                            <a href="contactanos.html" class="btn btn-outline-info px-4">Contactar →</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <a
-          href="contactanos.html#reservas"
-          class="btn btn-outline-info px-4"
-        >
-          Contactar →
-        </a>
-      </div>
-    </section>
-  </div>
-</div>
+    <!-- =============================================
+         MODALES DE INFORMACIÓN DE CADA EVENTO
+    ============================================= -->
+
+    <!-- Modal 1: Torneo Valorant -->
+    <div class="modal fade" id="modalValorant" tabindex="-1" aria-labelledby="modalValorantLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info fw-bold" id="modalValorantLabel">🎮 Torneo Valorant 5v5</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info small mb-3">📅 <strong>Fecha y Hora:</strong> 12 SEP · 16:00 hrs | 📍 <strong>Lugar:</strong> Sucursal Portugal 140</p>
+                    <p>Reúne a tu escuadrón y compite por el primer lugar en nuestro torneo competitivo de Valorant.</p>
+                    <hr class="border-secondary">
+                    <h6 class="text-info">Información y Reglas:</h6>
+                    <ul class="text-secondary small">
+                        <li><strong>Modalidad:</strong> Equipos de 5 jugadores (Eliminación directa).</li>
+                        <li><strong>Equipamiento:</strong> PCs gamer disponibles en el local (puedes traer mouse y audífonos propios).</li>
+                        <li><strong>Premios:</strong> Consumiciones gratis en Level Up Coffee Bar + trofeo y pases de batalla.</li>
+                        <li><strong>Inscripción:</strong> Gratuita realizando una consumición mínima en barra.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contactanos.html" class="btn btn-info text-dark fw-bold">Inscribirme / Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Mario Kart -->
+    <div class="modal fade" id="modalMarioKart" tabindex="-1" aria-labelledby="modalMarioKartLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info fw-bold" id="modalMarioKartLabel">🏎️ Noche de Mario Kart</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info small mb-3">📅 <strong>Fecha y Hora:</strong> 18 SEP · 19:00 hrs | 📍 <strong>Lugar:</strong> Sucursal Suecia 3465</p>
+                    <p>¡Una noche llena de caparazones azules, risas y emoción! Ven a demostrar quién es el mejor piloto de la pista.</p>
+                    <hr class="border-secondary">
+                    <h6 class="text-info">Información y Reglas:</h6>
+                    <ul class="text-secondary small">
+                        <li><strong>Modalidad:</strong> Carreras individuales en 150cc por puntaje y eliminación por fases.</li>
+                        <li><strong>Plataforma:</strong> Nintendo Switch proyectado en pantalla gigante.</li>
+                        <li><strong>Premios:</strong> Merchandising gamer exclusivo + vales de café y postres temáticos.</li>
+                        <li><strong>Inscripción:</strong> Abierta para todas las edades. Llegar 15 minutos antes para el sorteo de partidas.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contactanos.html" class="btn btn-info text-dark fw-bold">Inscribirme / Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Overcooked -->
+    <div class="modal fade" id="modalOvercooked" tabindex="-1" aria-labelledby="modalOvercookedLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info fw-bold" id="modalOvercookedLabel">👨‍🍳 Torneo de Overcooked</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info small mb-3">📅 <strong>Fecha y Hora:</strong> 26 SEP · 17:00 hrs | 📍 <strong>Lugar:</strong> Sucursal Portugal 140</p>
+                    <p>¿Podrán coordinarse bajo presión sin quemar la cocina? Trae a tu compañero y preparen los pedidos más desafiantes.</p>
+                    <hr class="border-secondary">
+                    <h6 class="text-info">Información y Reglas:</h6>
+                    <ul class="text-secondary small">
+                        <li><strong>Modalidad:</strong> Parejas (2 vs 2 en cocinas simultáneas, mayor puntaje avanza).</li>
+                        <li><strong>Plataforma:</strong> Cooperativo en consola.</li>
+                        <li><strong>Premios:</strong> Combo gastronómico "Gamer Feast" para el dúo ganador + medallas de chefs.</li>
+                        <li><strong>Inscripción:</strong> Cupos limitados (16 duplas). Se recomienda inscripción anticipada.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contactanos.html" class="btn btn-info text-dark fw-bold">Inscribirme / Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Club de Juegos de Mesa -->
+    <div class="modal fade" id="modalJuegosDeMesa" tabindex="-1" aria-labelledby="modalJuegosDeMesaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-info fw-bold" id="modalJuegosDeMesaLabel">🎲 Club de Juegos de Mesa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-info small mb-3">📅 <strong>Fecha y Hora:</strong> 3 OCT · 15:00 hrs | 📍 <strong>Lugar:</strong> Todas las sucursales</p>
+                    <p>Una tarde para desconectar de las pantallas y disfrutar con amigos de una gran variedad de juegos de mesa y cartas.</p>
+                    <hr class="border-secondary">
+                    <h6 class="text-info">Información y Dinámica:</h6>
+                    <ul class="text-secondary small">
+                        <li><strong>Juegos disponibles:</strong> Catan, Carcassonne, Dixit, Exploding Kittens, Virus y más.</li>
+                        <li><strong>Dinámica:</strong> Mesas libres con coordinadores dispuestos a explicarte las reglas si juegas por primera vez.</li>
+                        <li><strong>Beneficio:</strong> 15% de descuento en cafés especiales y barra de pociones durante la tarde.</li>
+                        <li><strong>Entrada:</strong> Entrada liberada con consumo en la cafetería.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="contactanos.html" class="btn btn-info text-dark fw-bold">Inscribirme / Consultar</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 <footer class="site-footer">
