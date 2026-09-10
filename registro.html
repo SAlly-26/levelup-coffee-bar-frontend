@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse — Level Up Coffee Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">☕ Level Up Coffee Bar</a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto gap-2 align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="menucafe.html">Menú Café</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactanos.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="registro.html">Registrarse</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-info btn-sm px-3" href="carrito.html">
+                            🛒 Carrito
+                            <span id="cart-badge" class="badge bg-info text-dark ms-1">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container registro-seccion">
+        <div class="row justify-content-center g-5 align-items-start">
+
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="registro-bienvenida">
+                    <h2 class="registro-titulo">Únete a la <span>partida</span> ☕</h2>
+                    <p class="registro-subtitulo">
+                        Crea tu cuenta y accede a beneficios exclusivos para
+                        los mejores jugadores del café.
+                    </p>
+                    <ul class="registro-beneficios">
+                        <li>🎮 Reserva mesas con anticipación</li>
+                        <li>⚡ Ofertas exclusivas para miembros</li>
+                        <li>🛒 Historial de compras en la tienda</li>
+                        <li>🏆 Participa en torneos y eventos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="registro-form">
+                    <h4 class="registro-form-titulo">Crear cuenta</h4>
+
+                    <div class="campo-grupo">
+                        <label class="campo-label">Nombre completo <span>*</span></label>
+                        <input type="text" id="reg-nombre" class="campo-input"
+                               placeholder="Ej: Carlos Abarzúa">
+                        <p class="campo-error" id="err-reg-nombre"></p>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label class="campo-label">Correo electrónico <span>*</span></label>
+                        <input type="email" id="reg-correo" class="campo-input"
+                               placeholder="Ej: carlos@gmail.com">
+                        <p class="campo-error" id="err-reg-correo"></p>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label class="campo-label">RUN <span>*</span></label>
+                        <input type="text" id="reg-run" class="campo-input"
+                               placeholder="Ej: 12345678-9" maxlength="10">
+                        <p class="campo-hint">Sin puntos, con guión. Ej: 12345678-9</p>
+                        <p class="campo-error" id="err-reg-run"></p>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label class="campo-label">Contraseña <span>*</span></label>
+                        <input type="password" id="reg-password" class="campo-input"
+                               placeholder="Mínimo 8 caracteres">
+                        <p class="campo-hint">Mínimo 8 caracteres, una mayúscula y un número.</p>
+                        <p class="campo-error" id="err-reg-password"></p>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label class="campo-label">Confirmar contraseña <span>*</span></label>
+                        <input type="password" id="reg-confirmar" class="campo-input"
+                               placeholder="Repite tu contraseña">
+                        <p class="campo-error" id="err-reg-confirmar"></p>
+                    </div>
+
+                    <div class="campo-grupo d-flex align-items-start gap-2">
+                        <input type="checkbox" id="reg-terminos" class="mt-1">
+                        <label for="reg-terminos" style="font-size:0.85rem; color:#888; cursor:pointer">
+                            Acepto los <a href="#" style="color:#00E5FF">términos y condiciones</a>
+                        </label>
+                    </div>
+                    <p class="campo-error" id="err-reg-terminos"></p>
+
+                    <button class="registro-btn" onclick="registrarUsuario()">
+                        Crear cuenta →
+                    </button>
+
+                    <p class="registro-login-link">
+                        ¿Ya tienes cuenta?
+                        <a href="#">Inicia sesión</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="registro-exitoso" class="registro-exito d-none">
+        <p class="fs-1">🎉</p>
+        <h4>¡Bienvenido al equipo!</h4>
+        <p>Tu cuenta fue creada con éxito.</p>
+        <a href="index.html" class="registro-btn" style="display:inline-block; text-decoration:none">
+            Ir a la Tienda →
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">© 2024 Level Up Coffee Bar. Todos los derechos reservados.</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>

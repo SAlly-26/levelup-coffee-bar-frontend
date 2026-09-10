@@ -1,19 +1,32 @@
-function mostrarPanel(nombre) {
+// ================================================
+// BLOQUE 1 — Mostrar el panel seleccionado
+// ================================================
+function mostrarPanel(nombre, boton) {
 
-    document.querySelectorAll('.admin-panel').forEach(panel => {panel.classList.remove('active');
+    // Ocultamos todos los paneles
+    document.querySelectorAll('.admin-panel').forEach(panel => {
+        panel.classList.remove('active');
     });
 
-    document.querySelectorAll('.admin-nav-btn').forEach(btn => {btn.classList.remove('active');
+    // Quitamos el "active" de todos los botones
+    document.querySelectorAll('.admin-nav-btn').forEach(btn => {
+        btn.classList.remove('active');
     });
 
+    // Mostramos el panel pedido
     document.getElementById('panel-' + nombre).classList.add('active');
 
-    event.currentTarget.classList.add('active');
+    // Marcamos el botón activo (solo si viene de un click)
+    if (boton) boton.classList.add('active');
 }
 
+// ================================================
+// BLOQUE 2 — Cargar inventario desde localStorage
+// ================================================
 function cargarInventario() {
-    const catalogo  = JSON.parse(localStorage.getItem('catalogo')) || [];
+    const catalogo   = JSON.parse(localStorage.getItem('catalogo')) || [];
     const contenedor = document.getElementById('admin-lista-productos');
+
     if (catalogo.length === 0) {
         contenedor.innerHTML = `
             <div class="col-12">
@@ -21,6 +34,7 @@ function cargarInventario() {
             </div>`;
         return;
     }
+
     contenedor.innerHTML = catalogo.map(producto => `
         <div class="col-sm-6 col-lg-3">
             <div class="content-card">
@@ -37,6 +51,9 @@ function cargarInventario() {
     `).join('');
 }
 
+// ================================================
+// BLOQUE 3 — Validar y agregar producto
+// ================================================
 function agregarProducto() {
 
     const nombre      = document.getElementById('admin-nombre').value.trim();
@@ -69,7 +86,6 @@ function agregarProducto() {
         limpiarError('err-precio', 'admin-precio');
     }
 
-
     if (stockVal === '' || isNaN(stockVal) || !Number.isInteger(Number(stockVal)) || Number(stockVal) < 0) {
         mostrarError('err-stock', 'admin-stock', 'El stock debe ser un número entero (sin decimales).');
         valido = false;
@@ -87,12 +103,12 @@ function agregarProducto() {
     if (!valido) return;
 
     const nuevoProducto = {
-        id:          Date.now(), // ID único basado en la hora
+        id:          Date.now(),
         nombre:      nombre,
         categoria:   categoria,
         precio:      Number(precioVal),
         stock:       Number(stockVal),
-        imagen:      imagen || 'img/default.webp',
+        imagen:      imagen || 'img/default.png',
         descripcion: descripcion
     };
 
@@ -102,10 +118,16 @@ function agregarProducto() {
 
     alert(`✅ "${nombre}" agregado al catálogo con éxito.`);
     limpiarFormulario();
-    mostrarPanel('inventario'); // Volvemos al inventario
+
+    // Volvemos al inventario y marcamos su botón
+    const btnInventario = document.querySelector('.admin-nav-btn');
+    mostrarPanel('inventario', btnInventario);
     cargarInventario();
 }
 
+// ================================================
+// BLOQUE 4 — Funciones auxiliares
+// ================================================
 function mostrarError(idError, idInput, mensaje) {
     document.getElementById(idError).textContent = mensaje;
     document.getElementById(idInput).classList.add('invalido');
@@ -124,3 +146,35 @@ function limpiarFormulario() {
     document.getElementById('admin-imagen').value      = '';
     document.getElementById('admin-descripcion').value = '';
 }
+
+// ================================================
+// BLOQUE 5 — Tabla de usuarios y arranque
+// ================================================
+const usuariosMock = [
+    { nombre: 'Administrador', correo: 'admin@levelup.cl', run: '12.345.678-9', rol: 'admin' },
+    { nombre: 'Ana García',    correo: 'ana@gmail.com',    run: '9.876.543-2',  rol: 'user'  },
+    { nombre: 'Carlos López',  correo: 'carlos@gmail.com', run: '11.223.344-5', rol: 'user'  },
+];
+
+function cargarUsuarios() {
+    const tbody = document.getElementById('admin-lista-usuarios');
+
+    tbody.innerHTML = usuariosMock.map((usuario, index) => `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${usuario.nombre}</td>
+            <td>${usuario.correo}</td>
+            <td>${usuario.run}</td>
+            <td>
+                <span class="badge-${usuario.rol}">
+                    ${usuario.rol === 'admin' ? 'Admin' : 'Usuario'}
+                </span>
+            </td>
+        </tr>
+    `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    cargarInventario();
+    cargarUsuarios();
+});
