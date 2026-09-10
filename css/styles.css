@@ -251,7 +251,15 @@ body{background-color:var(--bg);color:#e0e0e0;min-height:100vh}
 .historia .historia-block {
     background: transparent;
     border: none;
-    padding: 0;
+    padding: 2rem 0;
+}
+
+.historia .historia-block h2 {
+    margin-bottom: 1rem;
+}
+
+.historia .historia-block .content-image {
+    margin-top: 1.5rem;
 }
 .content-image{width:100%;max-height:380px;object-fit:cover;border-radius:12px}
 .menu-hero{text-align:center;padding:4rem 0 2rem}
