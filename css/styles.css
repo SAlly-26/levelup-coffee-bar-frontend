@@ -48,13 +48,22 @@ body {
     transform: translateY(-50%);
     text-align: center;
 
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 24px;
     border-radius: 12px;
 }
 /*Fuente de texto del carrusel/slide */
 .carousel-caption {
     font-family: "Press Start 2P", sans-serif;
+}
+/* “Bienvenido” y los párrafos */
+.carousel-caption p {
+    font-size: 30px;
+}
+
+/* “Todo gran juego comienza con el botón de Start.” */
+.carousel-caption h5 {
+    font-size: 38px;
 }
 /* === Tarjeta de producto === */
 .card-producto {
