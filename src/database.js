@@ -1,5 +1,5 @@
-import { seedProducts } from "./products";
-import { branches } from "./locations";
+import { seedProducts } from "./products.js";
+import { branches } from "./locations.js";
 
 const KEY = "levelup.database.v2";
 const initial = () => ({
