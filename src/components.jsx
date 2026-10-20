@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { db, money, price } from "./database";
 import { useShop } from "./store";
+import { branches, openingHours } from "./locations";
 export function Header() {
   const [open, setOpen] = useState(false);
   const { user, logout } = useShop();
@@ -52,6 +53,7 @@ export function Header() {
               ["/categorias", "Categorías"],
               ["/ofertas", "Ofertas"],
               ["/eventos", "Comunidad"],
+              ["/contacto", "Visítanos"],
             ].map(([to, text]) => (
               <NavLink key={to} to={to}>
                 {text}
@@ -110,7 +112,18 @@ export function Footer() {
           </div>
           <div>
             <b>Estamos para ayudarte</b>
-            <Link to="/contacto">Contáctanos</Link>
+            <Link to="/contacto">Sucursales y contacto</Link>
+            {branches.map((branch) => (
+              <a
+                key={branch.id}
+                href={branch.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {branch.address}
+              </a>
+            ))}
+            <p>Atención de {openingHours}</p>
             <Link to="/perfil">Mis compras</Link>
             <Link to="/terminos">Términos y privacidad</Link>
           </div>

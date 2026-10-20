@@ -12,6 +12,8 @@ Transformar la tienda HTML existente en una aplicación React que reúna la vent
 
 ## 2. Alcance y exclusiones
 
+**Actualización de tienda física:** Se restituyen las dos sucursales del proyecto base, con dirección, teléfono, horario y mapa integrado. El visitante puede abrir indicaciones en Google Maps y el comprador puede elegir sucursal para retiro gratuito. El pedido conserva el nombre y la dirección seleccionados para su comprobante. Estos datos se mantienen en `src/locations.js`.
+
 Se implementan componentes React reutilizables, rutas, fuente de datos JavaScript con CRUD, persistencia local, Bootstrap y flujos de compra, cuenta y administración. Se conservan los 11 productos y las imágenes de la base, con stock inicial de 20 unidades y descuentos de ejemplo en tres productos.
 
 Por solicitud expresa del equipo se excluyen la configuración Jasmine/Karma y la escritura/ejecución de sus pruebas. No se declara cobertura. El archivo entregado no contenía un backend: no se implementan pagos reales, autenticación de servidor, correos, base remota ni conexión con un backend desconocido. La presentación con integración real mencionada en la pauta debe coordinarse con el docente y el backend del equipo.

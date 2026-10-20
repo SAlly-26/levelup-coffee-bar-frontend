@@ -1,5 +1,13 @@
 # Verificaciones realizadas
 
+## Actualización: sucursales y mapas
+
+- Restauradas desde el HTML original las sucursales Portugal 140, Santiago, y Suecia 3465, Ñuñoa, con sus teléfonos, horario 08:00 a 22:00, URLs de mapas y enlaces de llegada.
+- Se comprobó en el navegador la carga de ambos mapas y la distribución de las tarjetas sin desborde horizontal en la vista revisada.
+- Se realizó una compra ficticia eligiendo Ñuñoa: el comprobante muestra “Retiro en Sucursal Ñuñoa · Suecia 3465, Ñuñoa” y entrega de $0.
+- El comprobante conserva una copia de la sucursal; pedidos antiguos sin ese dato siguen mostrando “Retiro en cafetería”.
+- Compilación actualizada con Vite. Sin pruebas Jasmine/Karma.
+
 Fecha: 19 de octubre de 2026. Proyecto probado en vista previa local, con datos ficticios. Estos resultados **no son pruebas Jasmine/Karma ni un informe de cobertura unitaria**.
 
 | Verificación                  | Resultado observado                                                                                           |

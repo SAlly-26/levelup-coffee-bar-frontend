@@ -43,6 +43,12 @@ Este acceso es una **simulación de frontend**: el navegador controla los datos 
 
 ## Estructura
 
+### Sucursales y mapas
+
+La vista `/#/contacto` conserva las dos ubicaciones, teléfonos, mapas de Google y horario de la página original. El menú “Visítanos”, el inicio y el pie enlazan esta sección. El checkout permite elegir sucursal de retiro y la dirección elegida queda registrada en el comprobante.
+
+Para cambiar direcciones, teléfonos o mapas, editar **`src/locations.js`**. El componente **`src/BranchLocations.jsx`** los muestra de forma adaptable a móviles. `mapEmbed` es la URL del iframe de Google Maps y `mapUrl` el enlace del botón “Cómo llegar”; ambos se conservaron del HTML original. Los mapas requieren internet. No se agregó una clave de API ni dependencias.
+
 | Archivo              | Responsabilidad                                                                      |
 | -------------------- | ------------------------------------------------------------------------------------ |
 | `src/seed.js`        | Fuente inicial JS: los 11 productos originales, más stock y descuentos demostrativos |
@@ -73,3 +79,4 @@ Revisar `docs/ERS-v2.md`, `docs/MATRIZ-REQUISITOS.md`, `docs/GUIA-PRESENTACION.m
 **Jasmine y Karma no están configurados, y no hay pruebas unitarias creadas ni resultados de cobertura**, por indicación del equipo. Las verificaciones de compilación y recorridos de navegador no sustituyen ese trabajo.
 
 El ZIP original no incluía backend. La integración real frontend/backend mencionada al final de la pauta queda fuera de esta demostración y debe realizarse con el backend del equipo si el docente la exige. El enlace público de GitHub debe ser creado o actualizado por el equipo en su repositorio; este trabajo no publica ni modifica cuentas externas. Completar integrantes, sección, docente y datos reales del negocio antes de entregar. Verificar también permisos de las imágenes originales.
+

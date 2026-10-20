@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Locations } from "./BranchLocations";
+import { branches, openingHours } from "./locations";
 import {
   Link,
   useNavigate,
@@ -168,6 +170,9 @@ export function Home() {
           </p>
           <Link className="btn btn-lime" to="/eventos">
             Conoce la comunidad <ArrowUpRight size={18} />
+          </Link>
+          <Link className="d-block mt-3" to="/contacto">
+            Visita nuestras sucursales ↗
           </Link>
         </div>
       </section>
@@ -629,10 +634,22 @@ export function Checkout() {
               />
             </div>
           ) : (
-            <p className="muted">
-              Coordinaremos el retiro usando el correo indicado. La dirección
-              del local debe ser confirmada por el equipo antes de uso real.
-            </p>
+            <>
+              <label className="field">
+                Sucursal de retiro
+                <select className="form-select" name="sucursal" required>
+                  {branches.map((branch) => (
+                    <option key={branch.id} value={branch.id}>
+                      {branch.address}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <p className="muted">
+                Retiro sin costo. Horario de atención: {openingHours}. Te
+                avisaremos cuando el pedido esté listo.
+              </p>
+            </>
           )}
           <h2 className="mt-4">03. Pago de demostración</h2>
           <label className="field">
@@ -697,7 +714,9 @@ export function Receipt({ order }) {
       </p>
       <p>
         {order.delivery === "retiro"
-          ? "Retiro en cafetería"
+          ? order.pickupBranch
+            ? `Retiro en ${order.pickupBranch.name} · ${order.pickupBranch.address}`
+            : "Retiro en cafetería"
           : `${order.customer.direccion}, ${order.customer.comuna}, ${order.customer.region}`}
       </p>
       <div className="table-responsive">
@@ -1129,54 +1148,69 @@ export function Contact() {
   }
   return (
     <main className="container section">
-      <PageTitle title="Conversemos entre partidas.">
-        Cuéntanos tu idea, consulta o propuesta para la comunidad.
+      <PageTitle
+        eyebrow="TIENDA FÍSICA / CAFETERÍA / CONTACTO"
+        title="Tu próxima partida tiene lugar."
+      >
+        Encuéntranos en Santiago y Ñuñoa. Ven por un café, descubre un juego y
+        quédate a compartir.
       </PageTitle>
-      <div className="checkout-grid">
-        <form className="panel" onSubmit={submit}>
-          <Field
-            label="Nombre"
-            name="nombre"
-            defaultValue={user?.nombre}
-            minLength={3}
-          />
-          <Field
-            label="Correo"
-            name="correo"
-            type="email"
-            defaultValue={user?.correo}
-          />
-          <label className="field">
-            Tu mensaje
-            <textarea
-              className="form-control"
-              name="mensaje"
-              rows="6"
-              required
-              minLength={10}
+      <Locations />
+      <section
+        className="contact-form-section"
+        aria-label="Formulario de contacto"
+      >
+        <div className="page-title">
+          <div className="eyebrow">HABLEMOS</div>
+          <h2>Conversemos entre partidas.</h2>
+          <p>Cuéntanos tu idea, consulta o propuesta para la comunidad.</p>
+        </div>
+        <div className="checkout-grid">
+          <form className="panel" onSubmit={submit}>
+            <Field
+              label="Nombre"
+              name="nombre"
+              defaultValue={user?.nombre}
+              minLength={3}
             />
-          </label>
-          <ErrorMessage message={error} />
-          <button className="btn btn-lime">
-            Guardar mensaje <ArrowUpRight size={18} />
-          </button>
-        </form>
-        <aside className="summary">
-          <h2>Una mesa para tus ideas</h2>
-          <p>
-            ¿Un encuentro de tu comunidad? ¿Una consulta sobre juegos? Te
-            escuchamos.
-          </p>
-          <p>
-            Este formulario guarda la consulta localmente para que el
-            administrador pueda revisarla.
-          </p>
-          <small>
-            El equipo debe completar la dirección, los horarios y los canales
-            reales del negocio antes de publicar.
-          </small>
-        </aside>
-      </div>
+            <Field
+              label="Correo"
+              name="correo"
+              type="email"
+              defaultValue={user?.correo}
+            />
+            <label className="field">
+              Tu mensaje
+              <textarea
+                className="form-control"
+                name="mensaje"
+                rows="6"
+                required
+                minLength={10}
+              />
+            </label>
+            <ErrorMessage message={error} />
+            <button className="btn btn-lime">
+              Guardar mensaje <ArrowUpRight size={18} />
+            </button>
+          </form>
+          <aside className="summary">
+            <h2>Una mesa para tus ideas</h2>
+            <p>
+              ¿Un encuentro de tu comunidad? ¿Una consulta sobre juegos? Te
+              escuchamos.
+            </p>
+            <p>
+              Este formulario guarda la consulta localmente para que el
+              administrador pueda revisarla.
+            </p>
+            <small>
+              Para hablar directamente con una sucursal, usa los teléfonos
+              indicados junto a los mapas.
+            </small>
+          </aside>
+        </div>
+      </section>
     </main>
   );
 }

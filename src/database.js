@@ -1,6 +1,6 @@
 import { seedProducts } from "./seed";
+import { branches } from "./locations";
 
-// Base de datos simulada: todas las escrituras pasan por este módulo.
 const KEY = "levelup.database.v2";
 const initial = () => ({
   products: seedProducts,
@@ -79,6 +79,12 @@ export const db = {
   // Validación y descuento de stock en una única escritura, sin pedidos parciales.
   checkout(customer, delivery, userId) {
     const data = read();
+    const pickupBranch =
+      delivery === "retiro"
+        ? branches.find((branch) => branch.id === customer.sucursal)
+        : null;
+    if (delivery === "retiro" && !pickupBranch)
+      throw Error("Selecciona una sucursal de retiro válida.");
     if (!data.cart.length) throw Error("Tu carrito está vacío.");
     const items = data.cart.map((line) => {
       const p = data.products.find((x) => x.id === line.id);
@@ -100,6 +106,13 @@ export const db = {
       userId,
       customer,
       delivery,
+      pickupBranch: pickupBranch
+        ? {
+            name: pickupBranch.name,
+            address: pickupBranch.address,
+            phone: pickupBranch.phone,
+          }
+        : null,
       items,
       subtotal,
       shipping,
