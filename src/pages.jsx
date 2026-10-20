@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Locations } from "./BranchLocations";
+import { Locations } from "./ubicaciones";
 import { branches, openingHours } from "./locations";
 import {
   Link,
@@ -651,7 +651,7 @@ export function Checkout() {
               </p>
             </>
           )}
-          <h2 className="mt-4">03. Pago de demostración</h2>
+          <h2 className="mt-4">03. Elegir simulacion</h2>
           <label className="field">
             Resultado de la simulación
             <select className="form-select" name="payment">
@@ -662,7 +662,7 @@ export function Checkout() {
           <label className="choice">
             <input type="checkbox" required /> Acepto los{" "}
             <Link to="/terminos">términos</Link> y entiendo que es una compra
-            simulada.
+            simulada, por lo tanto no se solicitarán tarjetas ni se realizarán cobros reales.
           </label>
           <ErrorMessage message={error} />
         </div>
@@ -1108,7 +1108,7 @@ export function Events() {
             />
           </div>
           <ErrorMessage message={error} />
-          <button className="btn btn-lime">Guardar solicitud</button>{" "}
+          <button className="btn btn-lime">Enviar solicitud</button>{" "}
           <button
             type="button"
             className="btn btn-outline-light"
@@ -1140,7 +1140,7 @@ export function Contact() {
       e.currentTarget.reset();
       setError("");
       setNotice(
-        "Mensaje guardado en la demostración. No se envió ningún correo.",
+        "Mensaje enviado. Gracias por contactarnos!!!",
       );
     } catch (err) {
       setError(err.message);
@@ -1191,7 +1191,7 @@ export function Contact() {
             </label>
             <ErrorMessage message={error} />
             <button className="btn btn-lime">
-              Guardar mensaje <ArrowUpRight size={18} />
+              Enviar mensaje <ArrowUpRight size={18} />
             </button>
           </form>
           <aside className="summary">
@@ -1199,10 +1199,6 @@ export function Contact() {
             <p>
               ¿Un encuentro de tu comunidad? ¿Una consulta sobre juegos? Te
               escuchamos.
-            </p>
-            <p>
-              Este formulario guarda la consulta localmente para que el
-              administrador pueda revisarla.
             </p>
             <small>
               Para hablar directamente con una sucursal, usa los teléfonos

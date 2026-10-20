@@ -1,4 +1,4 @@
-import { seedProducts } from "./seed";
+import { seedProducts } from "./products";
 import { branches } from "./locations";
 
 const KEY = "levelup.database.v2";
