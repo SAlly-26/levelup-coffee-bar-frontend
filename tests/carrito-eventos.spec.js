@@ -70,11 +70,11 @@ describe("Acciones del carrito", () => {
         fireEvent.click(botonAumentar);
 
         expect(setCartSpy).toHaveBeenCalledWith([
-            { id: producto.id, quantity: 2 }
+            { id: producto.id, quantity: 2 },
         ]);
-    })
+    });
 
-    it("Eliminar una linea quita el producto del carrito", () => {
+    it("Eliminar una línea quita el producto del carrito", () => {
         mostrarCarrito();
 
         const botonEliminar = screen.getByRole("button", {
