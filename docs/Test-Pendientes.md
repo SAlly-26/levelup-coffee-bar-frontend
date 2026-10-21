@@ -4,6 +4,9 @@
 | N.º | Grupo y archivo sugerido | Tipo | Las tres especificaciones |
 
 | Todo se ejecuta con estos comandos:
+| Primero:
+| nmp ci
+| Segundo:
 | npx karma start karma.conf.cjs
 | npx jasmine
 
