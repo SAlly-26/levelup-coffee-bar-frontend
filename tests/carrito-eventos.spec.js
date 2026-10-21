@@ -85,4 +85,24 @@ describe("Acciones del carrito", () => {
 
         expect(setCartSpy).toHaveBeenCalledWith([]);
     });
+
+    it("Muestra el carrito vacío cuando no hay productos", () => {
+        listSpy.and.callFake((tabla) => {
+            if (tabla === "products") {
+                return [producto];
+            }
+
+            if (tabla === "cart") {
+                return [];
+            }
+
+            return [];
+        });
+
+        mostrarCarrito();
+
+        expect(
+            screen.getByText("Tu carrito está esperando una aventura")
+        ).toBeTruthy();
+    });
 }); 
