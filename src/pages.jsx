@@ -393,8 +393,7 @@ export function Detail() {
               <Coffee size={18} /> Retiro gratis en cafetería
             </p>
             <small>
-              Imágenes referenciales. Pedidos y pagos simulados para este
-              proyecto académico.
+              Imágenes referenciales.
             </small>
           </div>
         </div>
