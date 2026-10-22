@@ -10,7 +10,7 @@ describe("Validacion del RUN", () => {
         expect(resultado).toBe(false);
     });
     it("Rechaza run invalido (texto)", () => {
-        const resultado = validRun("12.345.678-5");
+        const resultado = validRun("hola");
         expect(resultado).toBe(false);
     });
 });
