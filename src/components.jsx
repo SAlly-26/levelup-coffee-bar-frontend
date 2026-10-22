@@ -61,7 +61,7 @@ export function Header() {
             ))}
             {user ? (
               <>
-                <NavLink to="/perfil">{user.nombre.split(" ")[0]}</NavLink>
+                <NavLink to="/perfil">Mi Perfil</NavLink>
                 {user.role === "admin" && <NavLink to="/admin">Admin</NavLink>}
                 <button className="text-button" onClick={logout}>
                   Salir

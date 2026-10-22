@@ -14,6 +14,6 @@ if not exist node_modules (
     exit /b 1
   )
 )
-echo Abre en tu navegador la direccion Local que aparece abajo.
+echo Abrir
 call npm run dev
 pause

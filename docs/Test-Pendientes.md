@@ -5,10 +5,13 @@
 
 | Todo se ejecuta con estos comandos:
 | Primero:
-| nmp ci
+| npm ci
 | Segundo:
 | npx karma start karma.conf.cjs
 | npx jasmine
+| Cuenta Admin:
+| Correo: admin@levelup.test
+| Contraseña: DemoCafe2026
 
 |---|---|---|---|
 | **1 ✅** | **RUN** — `run.spec.js` | Validación de lógica | 1- Acepta RUN válido. 2- Rechaza verificador incorrecto. 3- Rechaza texto como `"hola"`. |
