@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { imageUrl } from "./imageUrl";
 import { PageTitle, Empty } from "./components";
 const articles = [
   {
@@ -107,7 +108,7 @@ export function Blog() {
             objectFit: "cover",
             borderRadius: 10,
           }}
-          src={"/img/" + a.image}
+          src={imageUrl("/img/" + a.image)}
           alt={a.title}
         />
         {a.sections.map(([title, text]) => (
@@ -130,7 +131,7 @@ export function Blog() {
       <div className="category-grid">
         {articles.map((a) => (
           <Link className="category-box" to={"/blog/" + a.id} key={a.id}>
-            <img src={"/img/" + a.image} alt={a.title} />
+            <img src={imageUrl("/img/" + a.image)} alt={a.title} />
             <div>
               <div className="eyebrow">{a.tag}</div>
               <h2 className="mt-3">{a.title}</h2>

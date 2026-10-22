@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { imageUrl } from "./imageUrl";
 import {
   Coffee,
   ShoppingBag,
@@ -188,7 +189,7 @@ export function ProductCard({ product: p }) {
   return (
     <article className="product-card">
       <Link to={"/producto/" + p.id} className="product-image">
-        <img src={p.imagen} alt={p.nombre} loading="lazy" />
+        <img src={imageUrl(p.imagen)} alt={p.nombre} loading="lazy" />
         {p.descuento > 0 && <span className="discount">−{p.descuento}%</span>}
         <span className="image-arrow">
           <ArrowUpRight size={22} />

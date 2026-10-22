@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Locations } from "./ubicaciones";
 import { branches, openingHours } from "./locations";
+import { imageUrl } from "./imageUrl";
 import {
   Link,
   useNavigate,
@@ -130,7 +131,7 @@ export function Home() {
                   <ArrowUpRight />
                 </span>
               </div>
-              <img src={"/img/" + img} alt="" />
+              <img src={imageUrl("/img/" + img)} alt="" />
             </Link>
           ))}
         </div>
@@ -155,7 +156,7 @@ export function Home() {
         </div>
       </section>
       <section className="community-banner container">
-        <img src="/img/nosotros2.png" alt="Un espacio para reunirse y jugar" />
+        <img src={imageUrl("/img/nosotros2.png")} alt="Un espacio para reunirse y jugar" />
         <div>
           <div className="eyebrow">AQUÍ TODOS TIENEN UN LUGAR</div>
           <h2>
