@@ -55,7 +55,10 @@ export function About() {
         Todo gran juego comienza con el botón de Start.
       </PageTitle>
       <div className="community-banner" style={{ width: "100%", margin: 0 }}>
-        <img src="/img/nosotros1.png" alt="Espacio de encuentro Level Up" />
+        <img
+          src={imageUrl("/img/nosotros1.png")}
+          alt="Espacio de encuentro Level Up"
+        />
         <div>
           <h2>El siguiente nivel es compartir.</h2>
           <p>

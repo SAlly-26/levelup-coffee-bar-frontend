@@ -36,7 +36,12 @@ export function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-photo" />
+        <div
+          className="hero-photo"
+          style={{
+            "--hero-image": `url("${imageUrl("/img/nosotros1.png")}")`,
+          }}
+        />
         <div className="container hero-content">
           <div className="eyebrow">
             <span className="live-dot" /> TU PUNTO DE ENCUENTRO
@@ -322,7 +327,9 @@ export function Categories() {
               to={`/${items[0]?.tipo === "cafe" ? "menu" : "tienda"}?categoria=${encodeURIComponent(c.nombre)}`}
               key={c.id}
             >
-              {items[0] && <img src={items[0].imagen} alt="" />}
+              {items[0] && (
+                <img src={imageUrl(items[0].imagen)} alt="" />
+              )}
               <div>
                 <h2>{c.nombre}</h2>
                 <span>
@@ -354,7 +361,7 @@ export function Detail() {
       </Link>
       <div className="detail-grid">
         <div className="detail-image">
-          <img src={p.imagen} alt={p.nombre} />
+          <img src={imageUrl(p.imagen)} alt={p.nombre} />
         </div>
         <div>
           <div className="eyebrow">{p.categoria} / LEVEL UP</div>
@@ -440,7 +447,10 @@ export function Cart() {
                 {l.product ? (
                   <>
                     <Link to={"/producto/" + l.id}>
-                      <img src={l.product.imagen} alt={l.product.nombre} />
+                      <img
+                        src={imageUrl(l.product.imagen)}
+                        alt={l.product.nombre}
+                      />
                     </Link>
                     <div className="flex-grow-1">
                       <small className="eyebrow">{l.product.categoria}</small>
@@ -855,7 +865,10 @@ export function Auth({ register = false }) {
           Guarda tus datos, revisa tus pedidos y prepárate para el siguiente
           nivel.
         </p>
-        <img src="/img/cafegamer.png" alt="Café con espíritu gamer" />
+        <img
+          src={imageUrl("/img/cafegamer.png")}
+          alt="Café con espíritu gamer"
+        />
       </div>
       <form className="panel" onSubmit={submit}>
         <h2>{register ? "Crea tu cuenta" : "Ingresa a Level Up"}</h2>
@@ -1065,7 +1078,7 @@ export function Events() {
       <div className="events-grid">
         {events.map((e) => (
           <article className="event-card" key={e.id}>
-            <img src={"/img/" + e.image} alt={e.title} />
+            <img src={imageUrl("/img/" + e.image)} alt={e.title} />
             <div>
               <div className="eyebrow">{e.tag}</div>
               <h2>{e.title}</h2>
