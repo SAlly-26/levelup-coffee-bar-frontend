@@ -1,0 +1,1 @@
+base: "/levelup-coffee-bar-frontend/"
