@@ -671,8 +671,7 @@ export function Checkout() {
           </label>
           <label className="choice">
             <input type="checkbox" required /> Acepto los{" "}
-            <Link to="/terminos">términos</Link> y entiendo que es una compra
-            simulada, por lo tanto no se solicitarán tarjetas ni se realizarán cobros reales.
+            <Link to="/terminos">términos</Link>.
           </label>
           <ErrorMessage message={error} />
         </div>

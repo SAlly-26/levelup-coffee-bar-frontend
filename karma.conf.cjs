@@ -16,6 +16,8 @@ module.exports = function (config) {
       },
       define: {
         "process.env.NODE_ENV": '"test"',
+        // Vite proporciona esta variable; Karma necesita definirla al compilar.
+        "import.meta.env.BASE_URL": '"/"',
       },
     },
 
